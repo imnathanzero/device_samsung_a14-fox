@@ -22,3 +22,14 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
+# Recovery additional binaries
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libion \
+    libxml2
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
+
+# Shipping level
+PRODUCT_SHIPPING_API_LEVEL := 31
